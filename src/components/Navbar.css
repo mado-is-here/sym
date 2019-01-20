@@ -1,0 +1,16 @@
+.navbar
+{
+	background-color: #262626;
+	width: 100%;
+	height: 60px;
+	display: grid; /*this will come in handy when adding more information to  navbar*/
+	grid-template-columns: 1fr; /*change to accomodate more items*/
+	margin: 0;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+}
+h2
+{
+	padding-top: 15px;
+}
