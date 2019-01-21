@@ -7,7 +7,7 @@ class Color extends Component {
     currentPos: 0
   };
   render() {
-    return <div className="color1" />;
+    return <div className="color" />;
   }
 }
 

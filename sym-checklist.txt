@@ -1,0 +1,10 @@
+- Make visualizations based on code and NOT images
+- ADD Fullscreen Button
+- ADD Background Music
+- Create 'Random Mood' feature
+- Add different 'Pattern Profiles' for colors so that the colors dont move the same way all the time
+- Store Cookies on browser so that the last theme / music / etc... (settings) are remembered by the app
+- Create a 'Control Panel' for allowing complete Mood Customization
+- Get SSL certificate for HTTPS on setyourmood.com
+- Make Sure Code is Clean, rewrite if necessary!
+- Test App on many devices and many browsers and Debug completely

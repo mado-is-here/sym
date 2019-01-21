@@ -12,8 +12,10 @@ class ColorBox extends Component {
   render() {
     const { color1 } = this.state;
     return (
-      <div id="colorBox">
-        <Color color={color1} />
+      <div className="colorbox-wrapper">
+        <div id="colorBox">
+          <Color color={color1} />
+        </div>
       </div>
     );
   }
