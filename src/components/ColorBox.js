@@ -6,13 +6,11 @@ class ColorBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color1: "#333",
-      color2: "#555",
-      color3: "#777"
+      color1: "#333"
     };
   }
   render() {
-    const { color1, color2, color3 } = this.state;
+    const { color1 } = this.state;
     return (
       <div id="colorBox">
         <Color color={color1} />
