@@ -1,0 +1,21 @@
+#colorBox {
+  height: 100vh !important;
+}
+.color1 {
+  height: 50vh;
+  width: 50vh;
+  display: block;
+  position: relative;
+  top: 50px; /* animate positions top and left to move lights around*/
+  left: 50px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(30, 87, 153, 1) 0%,
+    rgba(125, 185, 232, 0) 70%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@keyframes circle {
+}
