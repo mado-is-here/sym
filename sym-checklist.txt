@@ -1,9 +1,13 @@
-- Make visualizations based on code and NOT images
+//checkmark when completed (alt + 251)
+// use bullet points to list small improvements to be made to sections (alt + 7)
+√ Make visualizations based on code and NOT images
+	• make Lights move at slower speed for smaller devices
+	• make Lights spawn further away from eachother to minimize the amount of overlapping
 - ADD Fullscreen Button
 - ADD Background Music
 - Create 'Random Mood' feature
 - Add different 'Pattern Profiles' for colors so that the colors dont move the same way all the time
-- Store Cookies on browser so that the last theme / music / etc... (settings) are remembered by the app
+- Store Cookies on browser so that the last theme / music / etc... (settings) used, are remembered by the app
 - Create a 'Control Panel' for allowing complete Mood Customization
 - Get SSL certificate for HTTPS on setyourmood.com
 - Make Sure Code is Clean, rewrite if necessary!
