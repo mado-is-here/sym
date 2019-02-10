@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./styles/MoodSelector.css";
 
 class MoodSelector extends Component {
+  //handles smiley menu / expanding or shrinking it when clicked
   toggleMenu() {
-    //handles smiley menu / expanding or shrinking it when clicked
     let ul = document.querySelector(".cat1");
     let icon = document.querySelector(".fa-smile");
 
@@ -26,9 +26,8 @@ class MoodSelector extends Component {
     }
   }
 
+  //expands and shrinks mood selection categories
   toggleCategory(event) {
-    //expands and shrinks mood selection categories
-
     if (event.target.classList.contains("mood")) {
       // when user selects a mood, do this
       console.log(event.target);
