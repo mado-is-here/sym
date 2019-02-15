@@ -1,4 +1,11 @@
-const categories = [
+class Mood {
+  constructor(name, ...rest) {
+    this.name = name;
+    this.colors = [...rest];
+  }
+}
+
+const moodsObj = [
   {
     name: "Emotions",
     moods: ["happiness", "love", "sadness"]
@@ -9,7 +16,18 @@ const categories = [
   },
   {
     name: "Seasons",
-    moods: ["spring", "summer", "autumn", "winter"]
+    moods: [
+      "spring",
+      new Mood(
+        "summer",
+        [66, 197, 244],
+        [255, 215, 142],
+        [33, 175, 35],
+        [235, 255, 61]
+      ),
+      "autumn",
+      "winter"
+    ]
   },
   {
     name: "Vibes",
@@ -18,5 +36,5 @@ const categories = [
 ];
 
 module.exports = {
-  categories
+  moodsObj
 };

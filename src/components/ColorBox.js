@@ -1,14 +1,8 @@
 import React, { Component } from "react";
+import { moodsObj } from "../modules/theme-data";
 import "./styles/ColorBox.css";
 
 class ColorBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color1: "#333"
-    };
-  }
-
   componentDidMount() {
     const canvas = document.querySelector("canvas");
     const { offsetWidth: WIDTH, offsetHeight: HEIGHT } = document.querySelector(
@@ -25,34 +19,10 @@ class ColorBox extends Component {
       qty: 4,
       speed: 5,
       radius: Math.floor(Math.max(WIDTH, HEIGHT) / 2),
-      colors: [
-        {
-          //sea
-          r: 66,
-          g: 197,
-          b: 244
-        },
-        {
-          //sand
-          r: 255,
-          g: 215,
-          b: 142
-        },
-        {
-          //green
-          r: 33,
-          g: 175,
-          b: 35
-        },
-        {
-          //sunshine
-          r: 235,
-          g: 255,
-          b: 61
-        }
-      ]
+      colors: moodsObj[2].moods[1].colors
     };
 
+    console.log(lightProperties.colors);
     //the Light object, a single-color radial gradient that goes from a semi transparent center to a fully transparent outer
     function Light({ x, y, xv, yv, color, radius }) {
       this.x = x;
@@ -64,7 +34,6 @@ class ColorBox extends Component {
 
       //makes sure the gradient displays its position accurately
       this.resetGradient = () => {
-        const { r, g, b } = this.color;
         this.radialGradient = context.createRadialGradient(
           this.x,
           this.y,
@@ -73,8 +42,14 @@ class ColorBox extends Component {
           this.y,
           this.radius
         );
-        this.radialGradient.addColorStop(0.0, `rgba(${r}, ${g}, ${b}, 0.5)`);
-        this.radialGradient.addColorStop(1.0, `rgba(${r}, ${g}, ${b}, 0)`);
+        this.radialGradient.addColorStop(
+          0.0,
+          `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.5)`
+        );
+        this.radialGradient.addColorStop(
+          1.0,
+          `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0)`
+        );
       };
 
       //draws the object at its current x and y position

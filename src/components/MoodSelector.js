@@ -1,25 +1,7 @@
 import React, { Component } from "react";
-import { categories } from "../modules/theme-data";
 import "./styles/MoodSelector.css";
 
-const initialState = {
-  categories
-};
-
 class MoodSelector extends Component {
-  constructor(props) {
-    super(props);
-    this.state = initialState;
-  }
-
-  generateMenu(catObj) {
-    catObj.forEach(category => {
-      console.log(category.moods);
-    });
-
-    return <div />;
-  }
-
   //handles smiley menu / expanding or shrinking it when clicked
   toggleMenu() {
     let ul = document.querySelector(".cat1");
@@ -62,10 +44,6 @@ class MoodSelector extends Component {
   }
 
   render() {
-    //testing
-    console.log(this.state.categories);
-    this.generateMenu(this.state.categories);
-    //testing
     return (
       <div className="mood-selector-wrapper">
         <a id="mood-selector" onClick={this.toggleMenu}>
