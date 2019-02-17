@@ -12,7 +12,7 @@ class MoodSelector extends Component {
       ul.classList.toggle("slide-in");
     } else {
       if (ul.classList.contains("slide-in")) {
-        let innerLists = document.querySelectorAll("ol");
+        let innerLists = document.querySelectorAll(".cat2");
 
         innerLists.forEach(function(element) {
           if (element.classList.contains("expand")) {

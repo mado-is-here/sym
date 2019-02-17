@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { moodsObj } from "../modules/theme-data";
 import "./styles/ColorBox.css";
 
+//return random number from 0 to the number passed in (ex: 0 to 10)
+//the number passed-in itself will not be a possible returned value
+const randomNumber = num => {
+  return Math.floor(Math.random() * num);
+};
+
 class ColorBox extends Component {
   componentDidMount() {
     const canvas = document.querySelector("canvas");
@@ -19,7 +25,7 @@ class ColorBox extends Component {
       qty: 4,
       speed: 5,
       radius: Math.floor(Math.max(WIDTH, HEIGHT) / 2),
-      colors: moodsObj[2].moods[1].colors
+      colors: moodsObj[2].moods[2].colors
     };
 
     //the Light object, a single-color radial gradient that goes from a semi transparent center to a fully transparent outer
@@ -74,12 +80,6 @@ class ColorBox extends Component {
         this.draw();
       };
     }
-
-    //return random number from 0 to the number passed in (ex: 0 to 10)
-    //the number passed-in itself will not be a possible returned value
-    const randomNumber = num => {
-      return Math.floor(Math.random() * num);
-    };
 
     //returns an array of Light objects with a length equal to the number passed in
     //x and y position will be randomized
