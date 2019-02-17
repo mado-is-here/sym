@@ -3,7 +3,7 @@ import "./styles/MoodSelector.css";
 
 class MoodSelector extends Component {
   //handles smiley menu / expanding or shrinking it when clicked
-  toggleMenu() {
+  toggleMenu = () => {
     let ul = document.querySelector(".cat1");
     let icon = document.querySelector(".fa-smile");
 
@@ -24,15 +24,15 @@ class MoodSelector extends Component {
       ul.classList.toggle("slide-in");
       ul.classList.toggle("slide-out");
     }
-  }
+  };
 
   //expands and shrinks mood selection categories
-  toggleCategory(event) {
-    if (event.target.classList.contains("mood")) {
-      // when user selects a mood, do this
-      console.log(event.target);
-    } else if (event.target.classList.contains("category")) {
-      let ol = event.target.childNodes[2];
+  toggleCategory = event => {
+    const { target } = event;
+    if (target.classList.contains("mood")) {
+      this.props.onMoodSelection(target.innerHTML.toLowerCase());
+    } else if (target.classList.contains("category")) {
+      let ol = target.childNodes[2];
 
       if (ol.classList.length === 1) {
         ol.classList.toggle("expand");
@@ -41,7 +41,7 @@ class MoodSelector extends Component {
         ol.classList.toggle("shrink");
       }
     }
-  }
+  };
 
   render() {
     return (

@@ -5,9 +5,7 @@ import Footer from "./components/Footer";
 import MoodSelector from "./components/MoodSelector";
 
 const initialState = {
-  theme: "summer", // a theme is a pre-chosen mood and music combination
-  mood: "auto", // this can be custom chosen, or set to auto which follows theme
-  music: "auto", // this can be custom chosen, or set to auto which follows theme
+  mood: "summer",
   fullscreen: false
 };
 
@@ -17,12 +15,16 @@ class App extends Component {
     this.state = initialState;
   }
 
+  handleMoodSelection = mood => {
+    this.setState({ mood });
+  };
+
   render() {
     return (
       <div>
         <Navbar />
-        <MoodSelector />
-        <ColorBox />
+        <MoodSelector onMoodSelection={this.handleMoodSelection} />
+        <ColorBox mood={this.state.mood} />
         <Footer />
       </div>
     );
