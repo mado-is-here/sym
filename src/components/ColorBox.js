@@ -22,7 +22,6 @@ class ColorBox extends Component {
       colors: moodsObj[2].moods[1].colors
     };
 
-    console.log(lightProperties.colors);
     //the Light object, a single-color radial gradient that goes from a semi transparent center to a fully transparent outer
     function Light({ x, y, xv, yv, color, radius }) {
       this.x = x;
