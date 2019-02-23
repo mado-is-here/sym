@@ -8,6 +8,15 @@ const randomNumber = num => {
   return Math.floor(Math.random() * num);
 };
 
+//divides
+const getSpeedByScreenSize = size => {
+  if (size > 1536) return 5;
+  if (size <= 1536 && size > 1152) return 4;
+  if (size <= 1152 && size > 768) return 3;
+  if (size <= 768 && size > 384) return 2;
+  if (size <= 384) return 1;
+};
+
 class ColorBox extends Component {
   componentDidMount() {
     const canvas = document.querySelector("canvas");
@@ -22,9 +31,9 @@ class ColorBox extends Component {
 
     //control panel for all Light object properties
     const lightProperties = {
-      qty: 4,
-      speed: 5,
-      radius: Math.floor(Math.max(WIDTH, HEIGHT) / 2),
+      qty: 8,
+      speed: getSpeedByScreenSize(Math.min(WIDTH, HEIGHT)),
+      radius: Math.floor(Math.max(WIDTH, HEIGHT) / 1.5),
       colors: moodsObj[2].moods[2].colors
     };
 
